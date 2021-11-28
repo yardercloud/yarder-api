@@ -3,6 +3,7 @@ import SearchEngine, {
 } from '../databases/SearchEngine.database'
 
 export enum MessageLevel {
+  All = '',
   Emergency ='emergency',
   Alert ='alert',
   Critical ='critical',

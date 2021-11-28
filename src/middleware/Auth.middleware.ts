@@ -17,7 +17,7 @@ export default class AuthMiddleware {
 
   private static verifyOrigin (request: Request) {
     const host = request.hostname
-    const validOrigins = EnvUtil.origins()
+    const validOrigins = EnvUtil.corsEnabledHosts()
     if (!includes(validOrigins, host)) throw new Error(errors.invalidOrigin)
   }
 

@@ -28,8 +28,8 @@ export default class MessageValidation {
     const schema = Joi.object({
       from: this.schemas.from.required(),
       size: this.schemas.size.required(),
-      level: this.schemas.level.optional(),
-      body: this.schemas.body.optional()
+      level: this.schemas.level.required().allow(''),
+      body: this.schemas.body.required().allow('')
     })
     return this.validation.query(schema)
   }
